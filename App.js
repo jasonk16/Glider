@@ -26,6 +26,8 @@ import {
 import Header from './app/shared/Header';
 import HomeScreen from './app/screens/HomeScreen';
 
+import commonStyles from './app/styles/commonStyles';
+
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -33,7 +35,7 @@ const App: () => React$Node = () => {
     <SafeAreaProvider>
       <NavigationContainer>
         <StatusBar barStyle="light-content" />
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#FFA640'}} edges={['top']}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: commonStyles.backgroundOrange}} edges={['top']}>
           <Header/>
           <Stack.Navigator headerMode="none">
             <Stack.Screen name="Home" component={HomeScreen}/>
@@ -45,11 +47,7 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
-  sampleText: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent: "center"
-  }
+
 });
 
 export default App;
