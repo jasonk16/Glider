@@ -7,7 +7,7 @@ import Greeting from '../shared/Greeting';
 const HomeScreen = () => {
   return (
     <View style={styles.sampleText}>
-      {/* <Greeting /> */}
+      <Greeting />
       <Text>Glide your way through the traffic </Text>
     </View>
   )
