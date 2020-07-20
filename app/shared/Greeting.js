@@ -6,7 +6,7 @@ import commonStyles from '../styles/commonStyles';
 const Greeting = () => {
   return (
     <View style={styles.container}>
-      <Text>Good Morning</Text>
+      <Text style={styles.headerText}>Good Morning</Text>
     </View>
   )
 }
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     height: '18%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  headerText: {
+    fontFamily: 'SourceSansPro-Black'
   }
 })
 

@@ -20,6 +20,9 @@
 		C01FFB5360E5DBB00CD3B652 /* libPods-Glider-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE62A0FA51F486169FDAC95 /* libPods-Glider-tvOS.a */; };
 		C08877B26EA1A0CAA2F89C6A /* libPods-Glider-GliderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8586DBAA294CE33B6660588 /* libPods-Glider-GliderTests.a */; };
 		C772A571F3DAE1E5B9744E01 /* libPods-Glider-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB701976EB0C60E3D9151F5 /* libPods-Glider-tvOSTests.a */; };
+		D835321EB47A453CBA286B22 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */; };
+		596C2178EF204196ACD0BB70 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */; };
+		0762D52EC2114B41968E30D0 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F8586DBAA294CE33B6660588 /* libPods-Glider-GliderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider-GliderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA4C006929C52EFF5AB5D03 /* Pods-Glider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider.debug.xcconfig"; path = "Target Support Files/Pods-Glider/Pods-Glider.debug.xcconfig"; sourceTree = "<group>"; };
+		4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Black.ttf"; path = "../app/assets/fonts/SourceSansPro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Bold.ttf"; path = "../app/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Regular.ttf"; path = "../app/assets/fonts/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				CA3FA870CA937E76B49F4B62 /* Pods */,
+				B3880EFC45C24A608939F5DD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +204,17 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		B3880EFC45C24A608939F5DD /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */,
+				9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */,
+				5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +360,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D835321EB47A453CBA286B22 /* SourceSansPro-Black.ttf in Resources */,
+				596C2178EF204196ACD0BB70 /* SourceSansPro-Bold.ttf in Resources */,
+				0762D52EC2114B41968E30D0 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
