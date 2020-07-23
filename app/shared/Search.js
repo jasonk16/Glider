@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Text, Image, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, View, TextInput, Text, Image, TouchableOpacity } from 'react-native';
 
 import commonStyles from '../styles/commonStyles';
 
@@ -45,11 +45,6 @@ const Search = () => {
             <Text style={styles.buttonText}>Search</Text>
           </View>
         </TouchableOpacity>
-        {/* <Button
-          onPress={() => SubmitForm()}
-          title="Search"
-          color={commonStyles.textBrown}
-        /> */}
       </View>
     </>
   )
@@ -89,16 +84,17 @@ const styles = StyleSheet.create({
     paddingTop: '5%'
   },
   buttonDesign: {
-    height: 30,
-    width: 90,
-    backgroundColor: commonStyles.themeOrange,
-    borderRadius: 8,
+    height: 35,
+    width: 100,
+    borderColor: commonStyles.themeOrange, 
+    borderWidth: 2,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 20
   },
   buttonText: {
-    color: commonStyles.white,
+    color: commonStyles.themeOrange,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18
   }

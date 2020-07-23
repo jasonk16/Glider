@@ -9,7 +9,7 @@ const PredictionCard = () => {
       <LinearGradient
         style={styles.cardGradient}
         colors={['#F9C823', '#FC506E']}
-        start={{ x: 0, y: 1.3 }}
+        start={{ x: 0, y: 2.5 }}
         end={{ x: 0.7, y: 1 }}>
         <View style={styles.routeColumn}>
           <Text style={styles.routeName}>via Route Name</Text>
