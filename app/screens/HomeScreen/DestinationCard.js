@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
@@ -44,11 +44,11 @@ const DestinationCard = () => {
 
 const styles = StyleSheet.create({
   boxContainer: {
-    flex: 1,
+    height: 190,
     margin: '6%'
   },
   gradientBox: {
-    height: '45%',
+    flex: 1,
     borderRadius: 8
   },
   displayBox: {
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   destinationTextBox: {
-    margin: '5%',
+    margin: '4%',
     flexDirection: 'row'
   },
   cardTitle: {

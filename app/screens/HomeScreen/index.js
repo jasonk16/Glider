@@ -3,9 +3,11 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 import commonStyles from '../../styles/commonStyles';
+
 import Greeting from '../../shared/Greeting';
 import Search from '../../shared/Search';
 import DestinationCard from './DestinationCard';
+import PredictionCard from './PredictionCard'; 
 
 const HomeScreen = () => {
   return (
@@ -17,6 +19,7 @@ const HomeScreen = () => {
       </View>
       <View style={styles.infoDisplaySection}>
         <DestinationCard />
+        <PredictionCard />
       </View>
     </View>
   )
@@ -35,10 +38,10 @@ const styles = StyleSheet.create({
     paddingLeft: '5%'
   },
   inputSection: {
-    flex: 1,
+    flex: 2,
   },
   infoDisplaySection: {
-    flex: 3,
+    flex: 5,
     marginTop: '2%'
   }
 })
