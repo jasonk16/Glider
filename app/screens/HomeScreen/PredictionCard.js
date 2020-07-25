@@ -11,12 +11,15 @@ const PredictionCard = () => {
         colors={['#F9C823', '#FC506E']}
         start={{ x: 0, y: 2.5 }}
         end={{ x: 0.7, y: 1 }}>
+        <View style={styles.indicatorColumn}>
+            <View style={styles.trafficIndicator}></View>
+        </View>
         <View style={styles.routeColumn}>
           <Text style={styles.routeName}>via Route Name</Text>
         </View>
         <View style={styles.predictedColumn}>
           <Text style={styles.predictedTime}>40 mins</Text>
-          <Text style={styles.predictedDistance}>20km</Text>
+          <Text style={styles.predictedDistance}>20 km</Text>
         </View>
       </LinearGradient>
     </View>
@@ -33,6 +36,19 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 8,
     flexDirection: 'row',
+  },
+  indicatorColumn: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 30
+  },
+  trafficIndicator: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderColor: commonStyles.green,
+    backgroundColor: commonStyles.greenRGBA, 
+    borderWidth: 3
   },
   routeColumn: {
     flex: 2,

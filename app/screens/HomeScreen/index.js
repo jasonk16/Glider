@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
     paddingLeft: '5%'
   },
   inputSection: {
-    flex: 2,
+    flex: 3,
   },
   infoDisplaySection: {
-    flex: 5,
+    flex: 6,
     marginTop: '2%'
   }
 })

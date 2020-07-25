@@ -1,19 +1,59 @@
-import React from 'react';
+import React, { useState, Component } from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
 
 import commonStyles from '../styles/commonStyles';
 
-const Greeting = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.headerText}>Good Afternoon</Text>
-      <View style={styles.statusText}>
-        <Text style={styles.statusLocation}>Traffic in KLCC: </Text>
-        <Image style={styles.statusIndicator} source={require('../assets/greetingheader/Ellipse.png')} />
-        <Text style={styles.statusReport}>Clear</Text>
+class Greeting extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      greetingText: ""
+    }
+  }
+
+  componentDidMount() {
+    this.getTime();
+  }
+
+  getTime() {
+    let date = new Date();
+    let hourOfDay = date.getHours();
+
+    if (hourOfDay < 12) {
+      this.setState({
+        greetingText: "Good Morning"
+      })
+    }
+    else if (hourOfDay < 16) {
+      this.setState({
+        greetingText: "Good Afternoon"
+      })
+    }
+    else if (hourOfDay < 24) {
+      this.setState({
+        greetingText: "Good Evening"
+      })
+    }
+    else {
+      this.setState({
+        greetingText: "Hey there"
+      })
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.headerText}>{this.state.greetingText}</Text>
+        <View style={styles.statusText}>
+          <Text style={styles.statusLocation}>Traffic in KLCC: </Text>
+          <View style={styles.statusCircle}></View>
+          <Text style={styles.statusReport}>Clear</Text>
+        </View>
       </View>
-    </View>
-  )
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -31,21 +71,27 @@ const styles = StyleSheet.create({
   },
   statusText: {
     flexDirection: 'row',
-    paddingTop: '2%'
+    paddingTop: '2%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  statusLocation:{
+  statusLocation: {
     color: commonStyles.white,
     fontSize: 18
   },
-  statusIndicator: {
-    marginRight: '3%',
-    marginLeft: '3%',
-    alignItems: 'flex-end'
+  statusCircle: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderColor: commonStyles.green,
+    backgroundColor: commonStyles.greenRGBA, 
+    borderWidth: 3
   },
   statusReport: {
     color: commonStyles.white,
     fontSize: 18,
     fontFamily: 'SourceSansPro-Bold',
+    marginLeft: 8
   }
 })
 
