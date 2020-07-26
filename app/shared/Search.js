@@ -3,13 +3,16 @@ import { StyleSheet, View, TextInput, Text, Image, TouchableOpacity } from 'reac
 
 import commonStyles from '../styles/commonStyles';
 
-const Search = () => {
+const Search = (props) => {
 
   const [originValue, originOnChangeText] = React.useState("");
   const [destValue, destOnChangeText] = React.useState("");
 
   SubmitForm = () => {
-    console.log("Values: ", originValue, ",",destValue);
+    props.onSearch({
+      "originValue": originValue,
+      "destValue": destValue
+    })
   }
 
   return (
@@ -40,7 +43,6 @@ const Search = () => {
       </View>
       <View style={styles.searchSection}>
         <TouchableOpacity onPress={() => SubmitForm()}>
-          {/* <Image source={require("../assets/search/search-icon.png")} /> */}
           <View style={styles.buttonDesign}>
             <Text style={styles.buttonText}>Search</Text>
           </View>
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
   buttonDesign: {
     height: 35,
     width: 100,
-    borderColor: commonStyles.themeOrange, 
+    borderColor: commonStyles.themeOrange,
     borderWidth: 2,
     borderRadius: 20,
     alignItems: 'center',
