@@ -1,0 +1,946 @@
+{
+  "html_attributions": [],
+  "next_page_token": "CrQCIQEAAELRRI2g9_Kh_gKzOen3RWukp_mWv2kz84JbG1TgBrJQOsUkXzMp1toGcmSDf04HxH9eIUZjQhYIq113wDHCO7BXfwpE2iMkzPSXHLC6B5wPTTsutAR83o9hjG1hJDq-QIh-3h7t2uM2QZ-wueKxY6hvFUNBWssYWXIE5JDRFlZZno-2u2KP5MdfzeLbqxdOqBjZcBJS38MfizXROS4HFeZWilzE58vAZldAMZfSZ3yIko2tCDQXhs6hn7uHU4u40W5Ae6_Xn1XYlp9pJpNJ5FH3-L3f0dq8oOEmu5pLyeZvEo3jcZ1BcJNvtyGd3KLd0Sm-MdNzsXfmINgAKxvDuLIlLTKFVR39goZfVc924biRKNEmr60iNZakDJy5l7VgfRB9hkq8QOsKOo7nMUwgwQgSECR2QvzZ_Oy2FT7_8Iwq6HIaFD7CEm7lqqwBCqF59srJSr26oZql",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.51442979999999,
+          "lng": -0.1527446
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51583467989272,
+            "lng": -0.1507751701072778
+          },
+          "southwest": {
+            "lat": 51.51313502010728,
+            "lng": -0.1534748298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d1852b47b46b47397640547f9e849721c456b066",
+      "name": "Selfridges London",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110058958872426835457\">bsh-bsh Alyousuf</a>"
+          ],
+          "photo_reference": "CmRaAAAAth54dzKTSrXXEI21mi_FfHEVmyOJf2MdG1Xn2NGgWaG0RlRxyuHdi5nT8ktlKC0XsVHRk5W7oSRpA6nxxHz6fW1p6NCufJe7bxxEyocq2StSjIHuzGVF8-vAnkad5WoAEhBlbcz0Sr80BkP3zqZm36kdGhTYrj4_ENWWEltj_NlRgSbcMX5rNA",
+          "width": 2448
+        }
+      ],
+      "place_id": "ChIJDUkDWC0FdkgRvr1r4roiH4E",
+      "plus_code": {
+        "compound_code": "GR7W+QW London, United Kingdom",
+        "global_code": "9C3XGR7W+QW"
+      },
+      "rating": 4.4,
+      "reference": "ChIJDUkDWC0FdkgRvr1r4roiH4E",
+      "types": [
+        "shopping_mall",
+        "department_store",
+        "home_goods_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 23263
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Ground Floor, 36, 38 Great Castle St, Oxford St, London W1W 8LG, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5155323,
+          "lng": -0.1408631
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51685417989272,
+            "lng": -0.1395259201072778
+          },
+          "southwest": {
+            "lat": 51.51415452010728,
+            "lng": -0.1422255798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "fe84e2b85a7f4fefa6881a409b461f41bae4ac9a",
+      "name": "Miss Selfridge",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3888,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111621115844746274121\">Peter Foster</a>"
+          ],
+          "photo_reference": "CmRaAAAAaM9IDg4b91E09rK7fBv93t9rpNfL8SaGKCsl0OVW4EUWIvttE0lsBDPXjB1I8btWVGLFG9fnZS6_bY9nrtEqig0WBWlMCsBl8KQPhVfGfOLm7yaP-LOlMxJm7IdkpVBFEhDWejVGIEa4PaTrKrcG7iqwGhRTJ6NbM576Mr1pTqO5JFt1NHQuVw",
+          "width": 5184
+        }
+      ],
+      "place_id": "ChIJZZmpzywFdkgRu2BBVDT3Dmc",
+      "plus_code": {
+        "compound_code": "GV85+6M London, United Kingdom",
+        "global_code": "9C3XGV85+6M"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJZZmpzywFdkgRu2BBVDT3Dmc",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 65
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Selfridges, 400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5148527,
+          "lng": -0.1541075
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51620252989272,
+            "lng": -0.1527576701072778
+          },
+          "southwest": {
+            "lat": 51.51350287010727,
+            "lng": -0.1554573298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "6a562e74fffef98c900723c100debd34d51f88b2",
+      "name": "Selfridges Food Hall",
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111621115844746274121\">Peter Foster</a>"
+          ],
+          "photo_reference": "CmRaAAAA0R3U27ITOLKQSUgYVPYA0pTMqqQWkeSCs34b75oAXTPESpqEtBFuh7-Byc7GNLxX_csqK6SDGljs_1nh6KHUEnbg2Hl2lreQntY73Lx0QlCC1AsnSWoFKM8AycGTv8lzEhAZ5DLVBx3NC4BuwxWTOUbmGhS8kJBLWEMBjs82kAtNhvNnv8QA-Q",
+          "width": 6000
+        }
+      ],
+      "place_id": "ChIJhz7uPoQFdkgRyUqh-4zQ0zM",
+      "plus_code": {
+        "compound_code": "GR7W+W9 London, United Kingdom",
+        "global_code": "9C3XGR7W+W9"
+      },
+      "rating": 3.4,
+      "reference": "ChIJhz7uPoQFdkgRyUqh-4zQ0zM",
+      "types": [
+        "supermarket",
+        "grocery_or_supermarket",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 8
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "472-488 Brixton Rd, Ferndale, London SW9 8EH, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.46239509999999,
+          "lng": -0.1154502
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.46372862989271,
+            "lng": -0.1140146701072778
+          },
+          "southwest": {
+            "lat": 51.46102897010727,
+            "lng": -0.1167143298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "db207e99b094b0a68206b3616aa8f83fd00c7036",
+      "name": "Miss Selfridge",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1319,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102645033778089949663\">Burglar Bessy</a>"
+          ],
+          "photo_reference": "CmRaAAAABgVcPAvAVx4jIu5phgnhUNTEpglgEVSoWW77fcmUDX0MtTDFTNbJPdtarRIby0fnJ11-PK3C_eU53ytlE6MAUsab1RE3cqfNNcWIEax0H06THF1KmZoybHwTfimdmjpQEhDWrifW1-TjlNj3CrlWCoYuGhRGRJZtqff3nde9YjjSUObWdMTTlQ",
+          "width": 1125
+        }
+      ],
+      "place_id": "ChIJpyP10WcEdkgRlKfs0UT7Y6Q",
+      "plus_code": {
+        "compound_code": "FV6M+XR London, United Kingdom",
+        "global_code": "9C3XFV6M+XR"
+      },
+      "price_level": 2,
+      "rating": 3,
+      "reference": "ChIJpyP10WcEdkgRlKfs0UT7Y6Q",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 3
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "Colegrave House, 68-70 Berners St, Fitzrovia, London W1T 3NL, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5163562,
+          "lng": -0.1366269
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51787222989272,
+            "lng": -0.1351411201072778
+          },
+          "southwest": {
+            "lat": 51.51517257010727,
+            "lng": -0.1378407798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "eb1676dbebb498b013b1c61fa0a31bafdb860d25",
+      "name": "Miss Selfridge",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 1873,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101829413266436923745\">osde8info</a>"
+          ],
+          "photo_reference": "CmRaAAAArzcGlKxsllehCR4Nc75oBZPrtzfNmJYBZJU8CVfs6WhtjiJ7WKO_PVyHCwiDIJrMFZDSPceWYWTmLXFqE4JafeOLyO8znJHIP65wWo52KHnJIbD-OTe4eGG3mm3BRSUvEhDrm2_rhAWoOvhCnOR4f6ceGhTR4RXE0JGxKR9Uj3q_osu6ULBVPw",
+          "width": 2096
+        }
+      ],
+      "place_id": "ChIJj3Y7FSsbdkgRn6pZolBsCSY",
+      "plus_code": {
+        "compound_code": "GV87+G8 London, United Kingdom",
+        "global_code": "9C3XGV87+G8"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJj3Y7FSsbdkgRn6pZolBsCSY",
+      "types": [
+        "point_of_interest",
+        "clothing_store",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Oxford St, Soho, London W1H 6HB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5147062,
+          "lng": -0.1528574
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51624947989272,
+            "lng": -0.1509715701072778
+          },
+          "southwest": {
+            "lat": 51.51354982010728,
+            "lng": -0.1536712298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "c0578ce5563ef4a7ef60f1e8c3d06e7750c1c909",
+      "name": "Selfridges",
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104910990849584126420\">A Google User</a>"
+          ],
+          "photo_reference": "CmRZAAAAJPRuCopJKO-ed6qJhMGG9ZTzc7LtNVSQ9z83LtBYS7d0iFaHTyFm32E2FmwSJDQJZmE8QlML0i5Q-TCaMNg1qE3em4SLdHSN6B9g64QqrPXN3qN4-nrSpNLsNdn8G5cmEhD9ngBMY00OuGuCnMPEHGqXGhRNAwJhAkws6opuXQhwEGTHwFZYHw",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJhYVQeeUbdkgROlMkZWD8pUE",
+      "plus_code": {
+        "compound_code": "GR7W+VV London, United Kingdom",
+        "global_code": "9C3XGR7W+VV"
+      },
+      "rating": 5,
+      "reference": "ChIJhYVQeeUbdkgROlMkZWD8pUE",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 2
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "c/o Debenhams Plc, Clapham Junction, 315 Lavender Hill, London SW11 1QL, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.4635969,
+          "lng": -0.1674963
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.46503432989272,
+            "lng": -0.1662009701072778
+          },
+          "southwest": {
+            "lat": 51.46233467010728,
+            "lng": -0.1689006298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "44a87b7df1b551213ffb276607bf2c134337a55f",
+      "name": "Miss Selfridge",
+      "permanently_closed": true,
+      "place_id": "ChIJLRMdNpgFdkgR7eNRQ3xDU9A",
+      "plus_code": {
+        "compound_code": "FR7M+C2 London, United Kingdom",
+        "global_code": "9C3XFR7M+C2"
+      },
+      "price_level": 2,
+      "rating": 0,
+      "reference": "ChIJLRMdNpgFdkgR7eNRQ3xDU9A",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 0
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "112A Upper Guild Hall, Bluewater, Dartford, Greenhithe DA9 9SS, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.4392137,
+          "lng": 0.2705413
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.44100257989272,
+            "lng": 0.2718355798927222
+          },
+          "southwest": {
+            "lat": 51.43830292010728,
+            "lng": 0.2691359201072778
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d2854f757774858ec52a6974ebfcbb36d6167591",
+      "name": "Selfridges",
+      "place_id": "ChIJtzGHplex2EcRKp82InbuGpM",
+      "plus_code": {
+        "compound_code": "C7QC+M6 Greenhithe, United Kingdom",
+        "global_code": "9F32C7QC+M6"
+      },
+      "rating": 0,
+      "reference": "ChIJtzGHplex2EcRKp82InbuGpM",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 0
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5143803,
+          "lng": -0.1521312
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51580992989272,
+            "lng": -0.1504684701072778
+          },
+          "southwest": {
+            "lat": 51.51311027010728,
+            "lng": -0.1531681298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "cfa2e1210a3c097d5354300dd019bf59a5ca8986",
+      "name": "Louis Vuitton",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115951572900073369852\">Teodora Dimitrova</a>"
+          ],
+          "photo_reference": "CmRaAAAAU6cHHZy9r7pPMVStP2TrymtGtA0SSXzE8hwJ5DKzJM5h1CrQFPQFakQjqoVb0MVNVYkqU6Lljj8mRrDW1fnOCa1LSWBXzs0VbRmPNcQM1FH1fBLGCjmJBEM6cmNHWV4MEhAhT7VwbTW5M4o_p5DWJvNNGhTt4jhf49bE4IK8WSUwEgwJNgWrEQ",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJ30TQ0tQadkgRZTzxXstOAJc",
+      "plus_code": {
+        "compound_code": "GR7X+Q4 London, United Kingdom",
+        "global_code": "9C3XGR7X+Q4"
+      },
+      "price_level": 4,
+      "rating": 3.7,
+      "reference": "ChIJ30TQ0tQadkgRZTzxXstOAJc",
+      "types": [
+        "shoe_store",
+        "point_of_interest",
+        "clothing_store",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 316
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Selfridges, 400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5150435,
+          "lng": -0.152318
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51641812989272,
+            "lng": -0.1507018701072778
+          },
+          "southwest": {
+            "lat": 51.51371847010728,
+            "lng": -0.1534015298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "af2c6eae92323ae4b3d3bbe5320c0d045ff3688d",
+      "name": "Daniel Galvin Selfridges London | Hair & Wigs",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109041139650933304783\">Cobella</a>"
+          ],
+          "photo_reference": "CmRaAAAAiSMCtyL9lC47A2jeX9FptU_fyw7aWY4tHxmf1kTL6JORDZXQFFbUOhTijcOmxg2NpKyvUuTRd3ljtknFXkDLG5USfd9_B4rt03N5B4OBtcAPDPxyAHYdz1u9AjT3xpYzEhDUuLtqNhWwoVVU2sWR1IcFGhTejbFhsoYEGl-5SibjbMLyoElJZw",
+          "width": 1278
+        }
+      ],
+      "place_id": "ChIJ56UeqTIFdkgRuUEMQMXah9o",
+      "plus_code": {
+        "compound_code": "GR8X+23 London, United Kingdom",
+        "global_code": "9C3XGR8X+23"
+      },
+      "rating": 4.4,
+      "reference": "ChIJ56UeqTIFdkgRuUEMQMXah9o",
+      "types": [
+        "hair_care",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 72
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "c/o Debenhams Plc, Store D Westfield London Shopping Centre Ariel Way Greater, London W12 7GF, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.506828,
+          "lng": -0.223671
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.50818127989272,
+            "lng": -0.2227727701072778
+          },
+          "southwest": {
+            "lat": 51.50548162010728,
+            "lng": -0.2254724298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "dd654f988f10de2cf094b84bc554fc5bebab44df",
+      "name": "Miss Selfridge",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJ3cT9G9oPdkgRB4z9PDM0f9E",
+      "plus_code": {
+        "compound_code": "GQ4G+PG London, United Kingdom",
+        "global_code": "9C3XGQ4G+PG"
+      },
+      "price_level": 2,
+      "rating": 3.8,
+      "reference": "ChIJ3cT9G9oPdkgRB4z9PDM0f9E",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 5
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "400 Oxford St, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.51405250000001,
+          "lng": -0.1529677
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51537532989272,
+            "lng": -0.1516093201072778
+          },
+          "southwest": {
+            "lat": 51.51267567010728,
+            "lng": -0.1543089798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d3c10321418ada0c0337103b14ceeaad67880ab4",
+      "name": "Saint Laurent Selfridges & Co.",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100469731323374782628\">Khaled Qamber</a>"
+          ],
+          "photo_reference": "CmRaAAAAIPNaudcFduRlOe37D2X4v3PMJ3q537G5yKyxyrGjYOTjk74va5y9bgdemQEy19CGDcdPqCvOc5llEPlrchMF-UVnZNVxsYvb_tq7V8jJos6Y1q86d94GG5rLa5ISLAyaEhBQKCGX91gFTU7MMoQUlN0DGhSNEGJNSaZLhRVgCp4qqJN48buR_A",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJHcjopzIFdkgRQmNv0HmMlzE",
+      "plus_code": {
+        "compound_code": "GR7W+JR London, United Kingdom",
+        "global_code": "9C3XGR7W+JR"
+      },
+      "rating": 3.4,
+      "reference": "ChIJHcjopzIFdkgRQmNv0HmMlzE",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 14
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Unit L028, Lower Rose Gallery, East Mall Bluewater Park, Greenhithe DA9 9SH, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.4386139,
+          "lng": 0.2724362
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.44000867989271,
+            "lng": 0.2738801298927222
+          },
+          "southwest": {
+            "lat": 51.43730902010727,
+            "lng": 0.2711804701072777
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "f0031543bfe3d2f94741d7babd5f5502632c1da4",
+      "name": "Miss Selfridge",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109216764548760290592\">lawrence rodney</a>"
+          ],
+          "photo_reference": "CmRaAAAAscD_mAn8BuDeJ4Gc0JjOxDefbLjyVZFVMqBsmIgrkXlREEy747r-DGXPYg360wDKdsPA47Cp0dYgTzANhDh0gek3hpFxJDdmtVwZKI8Rml9Xc3dW9_HyCtzTJYSLQPX8EhCrk8wU31JdOIbWm-Q4k3d9GhRrfv793H3Xj4ZREIiiWbnTh9hMXw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJXyEfelCx2EcRRA8SxQ-7jtY",
+      "plus_code": {
+        "compound_code": "C7QC+CX Greenhithe, United Kingdom",
+        "global_code": "9F32C7QC+CX"
+      },
+      "price_level": 2,
+      "rating": 4.2,
+      "reference": "ChIJXyEfelCx2EcRRA8SxQ-7jtY",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 50
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Grand Floor, Lower, 400 Oxford St, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5145795,
+          "lng": -0.1530982
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51563912989273,
+            "lng": -0.1516559701072778
+          },
+          "southwest": {
+            "lat": 51.51293947010728,
+            "lng": -0.1543556298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "3e73b8e005a072be9d5e62a294649a83eda348e9",
+      "name": "Montblanc Boutique London - Selfridges",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 490,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114647298085396208768\">George Morina</a>"
+          ],
+          "photo_reference": "CmRaAAAAICzKKPTXUQj7o4SbmgEhB-BSYGTLG185fOGuFVUIOQXsptSNcA3uLIqFWn7yz68r_FF61_RBh5j9cgwWtHXwO5F-LjyMMmUvMYNiSXbxTYiiGKjSN2RCq17BopXx63kOEhB7dx7fCrZSA7QXl-c-wx95GhScD92fk9YWnpQki5bEHuzija4SnA",
+          "width": 490
+        }
+      ],
+      "place_id": "ChIJDUkDWC0FdkgR1dBOdp_JkI4",
+      "plus_code": {
+        "compound_code": "GR7W+RQ London, United Kingdom",
+        "global_code": "9C3XGR7W+RQ"
+      },
+      "rating": 3.7,
+      "reference": "ChIJDUkDWC0FdkgR1dBOdp_JkI4",
+      "types": [
+        "jewelry_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 6
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Ground Floor, Selfridges, 400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5146496,
+          "lng": -0.1528762
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51616027989272,
+            "lng": -0.1509809701072778
+          },
+          "southwest": {
+            "lat": 51.51346062010727,
+            "lng": -0.1536806298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "d48a97ff35dedf906eb61b7f9693f3da4cacfc36",
+      "name": "Selfridges Opticians (David Clulow)",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1200,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113497232173882996365\">David Clulow Opticians</a>"
+          ],
+          "photo_reference": "CmRaAAAAJbjyfEC3uCY2e9UW-UCYaQHhYHkqVbcKRg8eVXCSZW5IiNR7Zi-ta3tn-LKbP0_Mf88FrVWwkSNCrn3FysdZuOKKTgfSDq-VSNRAwY2bfKzGsWHTzKRQu7Itl177yeYMEhCXRstBmi2z4--OzX5x1cHbGhTzn449A1-Iny2yWzSKmUb-Jfs4Qw",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJB3gyNy0FdkgR-YbiXkSuSmg",
+      "plus_code": {
+        "compound_code": "GR7W+VR London, United Kingdom",
+        "global_code": "9C3XGR7W+VR"
+      },
+      "rating": 2.4,
+      "reference": "ChIJB3gyNy0FdkgR-YbiXkSuSmg",
+      "types": [
+        "health",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 10
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "c/o Outfit, Unit D, 14 Daniell Way Valley Retail Park, Purley Way, London CR0 4YJ, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.3792771,
+          "lng": -0.126606
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.38067942989272,
+            "lng": -0.1251911201072778
+          },
+          "southwest": {
+            "lat": 51.37797977010727,
+            "lng": -0.1278907798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "fa13b9b1bc7f2cf73d38306a226267b32014a496",
+      "name": "Miss Selfridge",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJw0-OkBoHdkgRwgEt71rV3Gg",
+      "plus_code": {
+        "compound_code": "9VHF+P9 Croydon, United Kingdom",
+        "global_code": "9C3X9VHF+P9"
+      },
+      "price_level": 2,
+      "rating": 1,
+      "reference": "ChIJw0-OkBoHdkgRwgEt71rV3Gg",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5144757,
+          "lng": -0.1525141
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51585762989272,
+            "lng": -0.1506599201072778
+          },
+          "southwest": {
+            "lat": 51.51315797010728,
+            "lng": -0.1533595798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "46b736d922aa07f7164b0c107f2cd6252e450dc5",
+      "name": "Marni at Selfridges",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJDUkDWC0FdkgRlNzLz_TVACc",
+      "plus_code": {
+        "compound_code": "GR7W+QX London, United Kingdom",
+        "global_code": "9C3XGR7W+QX"
+      },
+      "rating": 3,
+      "reference": "ChIJDUkDWC0FdkgRlNzLz_TVACc",
+      "types": [
+        "clothing_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 2
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "Selfridges, 400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5145526,
+          "lng": -0.1538971
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51588822989272,
+            "lng": -0.1526266701072778
+          },
+          "southwest": {
+            "lat": 51.51318857010727,
+            "lng": -0.1553263298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "fa2913637b72f1ce254e94471d5c0b07311b6531",
+      "name": "Snowflake Luxury Gelato - Selfridges & Co",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 1321,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116891536033362153465\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAA61t6nxwzj5v_YBWkYf2jVGyJ0KfZQKV1pPD1mjpMVU0s-jJBFAtEcqZ3NmwC-NFwYajnEL3wm6OKIBCmNL3-h2RzRjvryWHuy5TUkQaHTRZCkEm6wje-FpClio7_Lh9sEhCRlB7DIzDsBiHVy5vxEPVbGhSFIS4wt8KP4JAKoz3xYPPGCTWmbQ",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJc8HtszIFdkgROT2qbPjyuHc",
+      "plus_code": {
+        "compound_code": "GR7W+RC London, United Kingdom",
+        "global_code": "9C3XGR7W+RC"
+      },
+      "rating": 3.8,
+      "reference": "ChIJc8HtszIFdkgROT2qbPjyuHc",
+      "types": [
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 124
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "3, Selfridges, 400 Oxford St, Marylebone, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5145795,
+          "lng": -0.1530982
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51563912989273,
+            "lng": -0.1516559701072778
+          },
+          "southwest": {
+            "lat": 51.51293947010728,
+            "lng": -0.1543556298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "78f223e6a9d4bdc89d1b2946874d99690fd02fb8",
+      "name": "Prada London Selfridges Donna Shoes",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJDUkDWC0FdkgRZsoayQSQEj8",
+      "plus_code": {
+        "compound_code": "GR7W+RQ London, United Kingdom",
+        "global_code": "9C3XGR7W+RQ"
+      },
+      "rating": 5,
+      "reference": "ChIJDUkDWC0FdkgRZsoayQSQEj8",
+      "types": [
+        "point_of_interest",
+        "clothing_store",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 2
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Selfridges Department Store, 400 Oxford St, London W1A 1AB, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5144039,
+          "lng": -0.1532864
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.51575427989272,
+            "lng": -0.1519321701072778
+          },
+          "southwest": {
+            "lat": 51.51305462010728,
+            "lng": -0.1546318298927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+      "id": "cf08749d9ba9544480fa07c7d5bb4901b9079cf2",
+      "name": "Nespresso Boutique",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109232293317084074227\">C Rogers</a>"
+          ],
+          "photo_reference": "CmRaAAAAmSNy9PgWRAFoIO9fwkrftVMd_6S9BxCsnLVtWNZx2iuwvKQEuV7mwnRRDOx7q_BLcbBpIwlH4t2Q7KHcC1wDC222znjsgBhA7NMcrihHR2QD0I-wKgF2cpoiRcY-7wzQEhAdzijUOnnCH-fWd7TYwfuTGhQYp9gc8lnhADRBj9ey6rV5y48SnA",
+          "width": 1987
+        }
+      ],
+      "place_id": "ChIJOwguqDIFdkgRWsyy3nGL7-M",
+      "plus_code": {
+        "compound_code": "GR7W+QM London, United Kingdom",
+        "global_code": "9C3XGR7W+QM"
+      },
+      "rating": 4.3,
+      "reference": "ChIJOwguqDIFdkgRWsyy3nGL7-M",
+      "types": [
+        "food",
+        "point_of_interest",
+        "clothing_store",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 71
+    }
+  ],
+  "status": "OK"
+}

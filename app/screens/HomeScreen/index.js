@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
-import React from 'react';
-import { StyleSheet, View, Text, ImagePropTypes } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 import commonStyles from '../../styles/commonStyles';
 
@@ -8,12 +8,41 @@ import Greeting from '../../shared/Greeting';
 import Search from '../../shared/Search';
 import DestinationCard from './DestinationCard';
 import PredictionCard from './PredictionCard';
+import LocationList from './LocationLists';
 
 const HomeScreen = () => {
 
-  onSearch = (searchValues) => {
-    console.log(searchValues.originValue,",",searchValues.destValue)
+  const [searchResults, setSearchResults] = useState("");
+  const [selectedLocations, setSelectedLocation] = useState("");
+
+  onSearch = async (searchValues) => {
+    try {
+      let response = await fetch('https://tdihjytyz2.execute-api.us-east-1.amazonaws.com/glider-location-requests-dev-hello', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          source: searchValues.originValue,
+          dest: searchValues.destValue
+        })
+      })
+      let json = await response.json()
+      setSearchResults(json.responseJson.data);
+    }
+    catch (error) {
+      console.log(error)
+    }
   }
+
+  //reset search results once selected locations are returned. will cause infinite loop in LocationList if removed.
+  useEffect(() => {
+    if (selectedLocations !== "") {
+      setSearchResults("")
+      console.log("selectedLocations", selectedLocations)
+    }
+  })
 
   return (
     <View style={styles.bodyContainer}>
@@ -23,8 +52,19 @@ const HomeScreen = () => {
         <Search onSearch={this.onSearch} />
       </View>
       <View style={styles.infoDisplaySection}>
-        <DestinationCard />
-        <PredictionCard />
+        {(searchResults !== "") ?
+          (
+            <>
+              <LocationList displayData={searchResults} selectedPlaces={setSelectedLocation} />
+            </>
+          ) :
+          (
+            <>
+              <DestinationCard />
+              <PredictionCard />
+            </>
+          )
+        }
       </View>
     </View>
   )
