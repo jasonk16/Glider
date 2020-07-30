@@ -9,39 +9,48 @@ import Search from '../../shared/Search';
 import DestinationCard from './DestinationCard';
 import PredictionCard from './PredictionCard';
 import LocationList from './LocationLists';
+import Placeholder from '../../shared/Placeholder';
+
+import { getSearchLocations, getLocationInformation } from './routingRequest';
 
 const HomeScreen = () => {
-
   const [searchResults, setSearchResults] = useState("");
-  const [selectedLocations, setSelectedLocation] = useState("");
+  const [selectedLocations, setSelectedLocations] = useState("");
 
   onSearch = async (searchValues) => {
-    try {
-      let response = await fetch('https://tdihjytyz2.execute-api.us-east-1.amazonaws.com/glider-location-requests-dev-hello', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          source: searchValues.originValue,
-          dest: searchValues.destValue
-        })
-      })
-      let json = await response.json()
-      setSearchResults(json.responseJson.data);
+    if (selectedLocations !== ""){
+      setSelectedLocations("");
     }
-    catch (error) {
-      console.log(error)
-    }
+    let returnedResults = await getSearchLocations(searchValues);
+    setSearchResults(returnedResults);
   }
 
-  //reset search results once selected locations are returned. will cause infinite loop in LocationList if removed.
+  onSelect = () => {
+    //let locationDetails = getLocationInformation(selectedValues.dest); 
+    // setSelectedLocation(""); //so the search will work again
+  }
+
+  const SearchOperation = () => {
+    return (
+      <>
+        {
+          selectedLocations !== "" ?
+            <>
+              <DestinationCard />
+              <PredictionCard />
+            </>
+            :
+            <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
+        }
+      </>
+    )
+  }
+
   useEffect(() => {
-    if (selectedLocations !== "") {
-      setSearchResults("")
-      console.log("selectedLocations", selectedLocations)
-    }
+    //clear searchResults if want to return to original page
+    // if (selectedLocations != ""){
+    //   setSearchResults("");
+    // }
   })
 
   return (
@@ -55,13 +64,12 @@ const HomeScreen = () => {
         {(searchResults !== "") ?
           (
             <>
-              <LocationList displayData={searchResults} selectedPlaces={setSelectedLocation} />
+              <SearchOperation />
             </>
           ) :
           (
             <>
-              <DestinationCard />
-              <PredictionCard />
+              <Placeholder />
             </>
           )
         }

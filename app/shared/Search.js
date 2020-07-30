@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
   buttonDesign: {
     height: 35,
     width: 100,
+    backgroundColor: commonStyles.themeOrange,
     borderColor: commonStyles.themeOrange,
     borderWidth: 2,
     borderRadius: 20,
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   buttonText: {
-    color: commonStyles.themeOrange,
+    color: commonStyles.white,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18
   }

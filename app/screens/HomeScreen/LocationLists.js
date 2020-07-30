@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import commonStyles from '../../styles/commonStyles';
 
 import LocationCards from './LocationCards';
@@ -26,7 +26,7 @@ const LocationList = (props) => {
       setAllResults(originResults);
       setDisplayFlag(true);
     }
-    else if (selectedSource !== "" && selectedDest === "" ) {
+    else if (selectedSource !== "" && selectedDest === "") {
       setAllResults(destResults);
       setDisplayFlag(true);
     }
@@ -45,7 +45,7 @@ const LocationList = (props) => {
         console.log("Error parsing type.");
       }
     }
-    returnValues(); 
+    returnValues();
   })
 
   updateValues = (selectedValues) => {
@@ -54,7 +54,7 @@ const LocationList = (props) => {
   }
 
   returnValues = () => {
-    if (selectedSource, selectedDest !== "" && selectedSource !== selectedDest){
+    if (selectedSource, selectedDest !== "" && selectedSource !== selectedDest) {
       return (
         props.selectedPlaces({
           origin: selectedSource,
@@ -70,13 +70,15 @@ const LocationList = (props) => {
         <>
           <Text style={styles.sectionTitle}>Select {allResults.type === 'Source' ? 'Starting Point' : 'Destination'}: </Text>
           <View style={{ flex: 1 }}>
-            {
-              allResults.results.map((values, i) => {
-                return (
-                  <LocationCards key={i + 1} onSelect={this.updateValues} cardValues={values} />
-                )
-              })
-            }
+            <ScrollView alwaysBounceVertical={true}>
+              {
+                allResults.results.map((values, i) => {
+                  return (
+                    <LocationCards key={i + 1} onSelect={this.updateValues} cardValues={values} />
+                  )
+                })
+              }
+            </ScrollView>
           </View>
         </>
       }

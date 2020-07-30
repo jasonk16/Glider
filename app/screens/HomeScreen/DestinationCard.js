@@ -15,7 +15,7 @@ const DestinationCard = () => {
           <View style={styles.destinationTextBox}>
             <View style={{ flex: 2 }}>
               <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
-                Petronas Twin Towers
+                Selfridges London
               </Text>
               <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail">
                 This is a sample description that describes the features of the destination.
@@ -23,17 +23,17 @@ const DestinationCard = () => {
               <View style={styles.addressSection}>
                 <Image source={require('../../assets/displaycard/address-icon.png')} />
                 <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
-                  Kuala Lumpur City Center, 50088, Kuala Lumpur, Malaysia.
+                  400 Oxford St, Marylebone, London W1A 1AB, United Kingdom
                 </Text>
               </View>
               <View style={styles.phoneSection}>
                 <Image source={require('../../assets/displaycard/phone-icon.png')} />
-                <Text style={styles.infoText}>+60 30954892</Text>
+                <Text style={styles.infoText}>+44 20 7160 6222</Text>
               </View>
             </View>
             <View style={styles.operatingHours}>
               <Text style={styles.openStatus}>OPENS SOON</Text>
-              <Text style={styles.openTimes}>10 am - 10 pm</Text>
+              <Text style={styles.openTimes}>10 am - 9 pm</Text>
             </View>
           </View>
         </View>
