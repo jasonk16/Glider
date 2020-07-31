@@ -18,7 +18,6 @@ const LocationList = (props) => {
   let data = props.displayData;
 
   useEffect(() => {
-
     let originResults = data[0];
     let destResults = data[1];
 
@@ -57,8 +56,10 @@ const LocationList = (props) => {
     if (selectedSource, selectedDest !== "" && selectedSource !== selectedDest) {
       return (
         props.selectedPlaces({
-          origin: selectedSource,
-          dest: selectedDest
+          origin_id: selectedSource.place_id,
+          origin_loc: selectedSource.location,
+          dest_id: selectedDest.place_id,
+          dest_loc: selectedDest.location
         })
       )
     }

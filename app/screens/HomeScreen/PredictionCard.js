@@ -3,7 +3,10 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
-const PredictionCard = () => {
+const PredictionCard = (props) => {
+
+  let data = props.predictedTime;
+
   return (
     <View style={styles.predictionBox}>
       <LinearGradient
@@ -15,11 +18,11 @@ const PredictionCard = () => {
             <View style={styles.trafficIndicator}></View>
         </View>
         <View style={styles.routeColumn}>
-          <Text style={styles.routeName}>via Route Name</Text>
+          <Text style={styles.routeName}>via {data.route_name}</Text>
         </View>
         <View style={styles.predictedColumn}>
-          <Text style={styles.predictedTime}>40 mins</Text>
-          <Text style={styles.predictedDistance}>20 km</Text>
+          <Text style={styles.predictedTime}>{data.predicted_time}</Text>
+          <Text style={styles.predictedDistance}>{data.route_distance}</Text>
         </View>
       </LinearGradient>
     </View>

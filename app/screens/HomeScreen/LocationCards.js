@@ -8,9 +8,17 @@ const LocationCards = (props) => {
 
   let data = props.cardValues;
 
+  onSelect = () => {
+    let returnValues = {
+      "place_id" : data.place_id,
+      "location" : data.location
+    }
+    props.onSelect(returnValues); 
+  }
+
   return (
     <View style={styles.locationBox}>
-      <TouchableOpacity style={{ flex: 1 }} onPress={() => props.onSelect(data.place_id)}>
+      <TouchableOpacity style={{ flex: 1 }} onPress={() => this.onSelect()}>
         <LinearGradient
           style={styles.cardGradient}
           colors={['#F9C823', '#FC506E']}

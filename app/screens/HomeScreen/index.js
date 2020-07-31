@@ -13,45 +13,66 @@ import Placeholder from '../../shared/Placeholder';
 
 import { getSearchLocations, getLocationInformation } from './routingRequest';
 
+const LoadingScreen = () => {
+  return(
+    <View>
+      <Text>Loading...</Text>
+    </View>
+  )
+}
+
 const HomeScreen = () => {
   const [searchResults, setSearchResults] = useState("");
   const [selectedLocations, setSelectedLocations] = useState("");
+  const [returnedPrediction, setReturnedPrediction] = useState("");
 
   onSearch = async (searchValues) => {
-    if (selectedLocations !== ""){
+    //clear any previous selected locations
+    if (selectedLocations !== "") {
       setSelectedLocations("");
     }
     let returnedResults = await getSearchLocations(searchValues);
     setSearchResults(returnedResults);
   }
 
-  onSelect = () => {
-    //let locationDetails = getLocationInformation(selectedValues.dest); 
-    // setSelectedLocation(""); //so the search will work again
+  fetchDestinationData = async () => {
+    //clear searchResults if want to return to original page
+    if (selectedLocations !== "") {
+      let returnedData = await getLocationInformation(selectedLocations);
+      setReturnedPrediction(returnedData);
+      //set state using the returned data
+      //clear selectedLocations. (or clear tgt with searcResults when user clicks back) 
+    };
   }
+
+  useEffect(() => {
+    if (returnedPrediction === "") {
+      fetchDestinationData();
+    }
+  })
 
   const SearchOperation = () => {
     return (
       <>
-        {
-          selectedLocations !== "" ?
-            <>
-              <DestinationCard />
-              <PredictionCard />
-            </>
-            :
-            <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
+        {selectedLocations !== "" ?
+          <>
+            {returnedPrediction !== "" ?
+              <>
+                <DestinationCard locationDetails={returnedPrediction[0]} />
+                <PredictionCard predictedTime={returnedPrediction[1]} />
+              </>
+              :
+              <>
+                <LoadingScreen />
+              </>
+            }
+          </>
+          :
+          <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
         }
       </>
     )
   }
-
-  useEffect(() => {
-    //clear searchResults if want to return to original page
-    // if (selectedLocations != ""){
-    //   setSearchResults("");
-    // }
-  })
 
   return (
     <View style={styles.bodyContainer}>

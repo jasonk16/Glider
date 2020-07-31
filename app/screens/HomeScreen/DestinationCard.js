@@ -3,7 +3,10 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
-const DestinationCard = () => {
+const DestinationCard = (props) => {
+
+  let data = props.locationDetails; 
+
   return (
     <View style={styles.boxContainer}>
       <LinearGradient
@@ -15,7 +18,7 @@ const DestinationCard = () => {
           <View style={styles.destinationTextBox}>
             <View style={{ flex: 2 }}>
               <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
-                Selfridges London
+                {data.name}
               </Text>
               <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail">
                 This is a sample description that describes the features of the destination.
@@ -23,12 +26,12 @@ const DestinationCard = () => {
               <View style={styles.addressSection}>
                 <Image source={require('../../assets/displaycard/address-icon.png')} />
                 <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
-                  400 Oxford St, Marylebone, London W1A 1AB, United Kingdom
+                  {data.formatted_address}
                 </Text>
               </View>
               <View style={styles.phoneSection}>
                 <Image source={require('../../assets/displaycard/phone-icon.png')} />
-                <Text style={styles.infoText}>+44 20 7160 6222</Text>
+                <Text style={styles.infoText}>{data.formatted_phone_number}</Text>
               </View>
             </View>
             <View style={styles.operatingHours}>
