@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GliderTests.m */; };
+		0762D52EC2114B41968E30D0 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -16,13 +17,12 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GliderTests.m */; };
+		596C2178EF204196ACD0BB70 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C01FFB5360E5DBB00CD3B652 /* libPods-Glider-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE62A0FA51F486169FDAC95 /* libPods-Glider-tvOS.a */; };
 		C08877B26EA1A0CAA2F89C6A /* libPods-Glider-GliderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8586DBAA294CE33B6660588 /* libPods-Glider-GliderTests.a */; };
 		C772A571F3DAE1E5B9744E01 /* libPods-Glider-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB701976EB0C60E3D9151F5 /* libPods-Glider-tvOSTests.a */; };
 		D835321EB47A453CBA286B22 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */; };
-		596C2178EF204196ACD0BB70 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */; };
-		0762D52EC2114B41968E30D0 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Glider/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Glider-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glider-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Glider-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Glider-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Black.ttf"; path = "../app/assets/fonts/SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Regular.ttf"; path = "../app/assets/fonts/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		5EEA396FC9CC080AED2EAF41 /* libPods-Glider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5C6064FE9DE25D9708A49F /* Pods-Glider-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Glider-tvOSTests/Pods-Glider-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		75F19ADEACE21F2087488A85 /* Pods-Glider-GliderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-GliderTests.debug.xcconfig"; path = "Target Support Files/Pods-Glider-GliderTests/Pods-Glider-GliderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		82CE183DF57C3F87C70DE1A3 /* Pods-Glider-GliderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-GliderTests.release.xcconfig"; path = "Target Support Files/Pods-Glider-GliderTests/Pods-Glider-GliderTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F0ADE39953E9626EB70CB8C /* Pods-Glider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider.release.xcconfig"; path = "Target Support Files/Pods-Glider/Pods-Glider.release.xcconfig"; sourceTree = "<group>"; };
 		990B831DCF4FFFD325819044 /* Pods-Glider-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Glider-tvOSTests/Pods-Glider-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Bold.ttf"; path = "../app/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
 		9EB701976EB0C60E3D9151F5 /* libPods-Glider-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE62A0FA51F486169FDAC95 /* libPods-Glider-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D6E433D8FE220C449BB3C5 /* Pods-Glider-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Glider-tvOS/Pods-Glider-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,9 +73,6 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F8586DBAA294CE33B6660588 /* libPods-Glider-GliderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider-GliderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA4C006929C52EFF5AB5D03 /* Pods-Glider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider.debug.xcconfig"; path = "Target Support Files/Pods-Glider/Pods-Glider.debug.xcconfig"; sourceTree = "<group>"; };
-		4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Black.ttf"; path = "../app/assets/fonts/SourceSansPro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Bold.ttf"; path = "../app/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; name = "SourceSansPro-Regular.ttf"; path = "../app/assets/fonts/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +189,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B3880EFC45C24A608939F5DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */,
+				9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */,
+				5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CA3FA870CA937E76B49F4B62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,20 +211,8 @@
 				990B831DCF4FFFD325819044 /* Pods-Glider-tvOSTests.debug.xcconfig */,
 				6B5C6064FE9DE25D9708A49F /* Pods-Glider-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		B3880EFC45C24A608939F5DD /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				4103D4CA1096483BA295B151 /* SourceSansPro-Black.ttf */,
-				9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */,
-				5EA0086A1983484A8B6B16C0 /* SourceSansPro-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -312,6 +310,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = N6636DGWD9;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -677,6 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6636DGWD9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Glider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -685,7 +685,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jason.gliderApp;
 				PRODUCT_NAME = Glider;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -700,6 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N6636DGWD9;
 				INFOPLIST_FILE = Glider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -707,7 +708,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jason.gliderApp;
 				PRODUCT_NAME = Glider;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

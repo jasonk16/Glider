@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   searchSection: {
     alignItems: 'flex-end',
     paddingRight: '15%',
-    paddingTop: '5%'
+    paddingTop: 10
   },
   buttonDesign: {
     height: 35,

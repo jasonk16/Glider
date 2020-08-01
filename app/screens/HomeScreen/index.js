@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 import commonStyles from '../../styles/commonStyles';
 
@@ -14,9 +15,12 @@ import Placeholder from '../../shared/Placeholder';
 import { getSearchLocations, getLocationInformation } from './routingRequest';
 
 const LoadingScreen = () => {
-  return(
-    <View>
-      <Text>Loading...</Text>
+  return (
+    <View style={{ flex: 1 }}>
+      <View style={styles.animationContainer}>
+        <LottieView style={styles.loadingAnimation} source={require('../../assets/loading-map.json')} autoPlay loop />
+        <Text style={styles.loadingText}>Taking you there...</Text>
+      </View>
     </View>
   )
 }
@@ -45,6 +49,12 @@ const HomeScreen = () => {
     };
   }
 
+  clearAll = () => {
+    setSearchResults("");
+    setSelectedLocations("");
+    setReturnedPrediction("");
+  }
+
   useEffect(() => {
     if (returnedPrediction === "") {
       fetchDestinationData();
@@ -60,6 +70,9 @@ const HomeScreen = () => {
               <>
                 <DestinationCard locationDetails={returnedPrediction[0]} />
                 <PredictionCard predictedTime={returnedPrediction[1]} />
+                <TouchableOpacity style={styles.clearResults} onPress={this.clearAll}>
+                  <Text style={styles.clearText}>Clear Results</Text>
+                </TouchableOpacity>
               </>
               :
               <>
@@ -116,7 +129,31 @@ const styles = StyleSheet.create({
   },
   infoDisplaySection: {
     flex: 6,
-    marginTop: '2%'
+    marginTop: '2%',
+  },
+  clearResults: {
+    alignItems: 'flex-end',
+    marginRight: '6%',
+    paddingTop: '4%'
+  },
+  clearText: {
+    color: commonStyles.themeOrange,
+    fontFamily: 'SourceSansPro-Bold',
+    fontSize: 20,
+    textDecorationLine: 'underline', 
+  },
+  animationContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingAnimation: {
+    height: 200,
+    width: 200
+  },
+  loadingText: {
+    color: '#FDB535',
+    fontFamily: 'SourceSansPro-Black',
+    fontSize: 25
   }
 })
 
