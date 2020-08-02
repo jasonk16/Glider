@@ -5,7 +5,22 @@ import commonStyles from '../../styles/commonStyles';
 
 const DestinationCard = (props) => {
 
-  let data = props.locationDetails; 
+  let data = props.locationDetails;
+  let date = new Date();
+  let timeOfDay = date.getDay();
+  let openingTime
+
+  if (data.opening_hours !== undefined) {
+    if (data.opening_hours.periods !== undefined) {
+      let openingPeriod = data.opening_hours.periods;
+      console.log("OPEN", openingPeriod)
+      openingPeriod.forEach((timeObject) => {
+        if (timeObject.close.day === timeOfDay) {
+          openingTime = timeObject.open.time + " - " + timeObject.close.time;
+        }
+      })
+    }
+  }
 
   return (
     <View style={styles.boxContainer}>
@@ -16,28 +31,37 @@ const DestinationCard = (props) => {
         end={{ x: 0.7, y: 1 }}>
         <View style={styles.displayBox}>
           <View style={styles.destinationTextBox}>
-            <View style={{ flex: 2 }}>
-              <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
-                {data.name}
-              </Text>
-              <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail">
-                This is a sample description that describes the features of the destination.
-              </Text>
-              <View style={styles.addressSection}>
-                <Image source={require('../../assets/displaycard/address-icon.png')} />
-                <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
-                  {data.formatted_address}
-                </Text>
-              </View>
-              <View style={styles.phoneSection}>
-                <Image source={require('../../assets/displaycard/phone-icon.png')} />
-                <Text style={styles.infoText}>{data.formatted_phone_number}</Text>
-              </View>
-            </View>
-            <View style={styles.operatingHours}>
-              <Text style={styles.openStatus}>OPENS SOON</Text>
-              <Text style={styles.openTimes}>10 am - 9 pm</Text>
-            </View>
+            {data.name !== undefined &&
+              <>
+                <View style={{ flex: 2 }}>
+                  <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
+                    {data.name}
+                  </Text>
+                  <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail">
+                    {data.website}
+                  </Text>
+                  <View style={styles.addressSection}>
+                    <Image source={require('../../assets/displaycard/address-icon.png')} />
+                    <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
+                      {data.formatted_address}
+                    </Text>
+                  </View>
+                  <View style={styles.phoneSection}>
+                    <Image source={require('../../assets/displaycard/phone-icon.png')} />
+                    <Text style={styles.infoText}>{data.formatted_phone_number}</Text>
+                  </View>
+                </View>
+                <View style={styles.operatingHours}>
+                  {
+                    data.opening_hours !== undefined &&
+                    <>
+                      <Text style={styles.openStatus}>{data.opening_hours.open_now ? 'OPEN NOW' : 'CLOSED'}</Text>
+                      <Text style={styles.openTimes}>{openingTime}</Text>
+                    </>
+                  }
+                </View>
+              </>
+            }
           </View>
         </View>
       </LinearGradient>
