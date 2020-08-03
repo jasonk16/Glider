@@ -6,9 +6,6 @@ import LocationCards from './LocationCards';
 
 const LocationList = (props) => {
 
-  //Get value from card component
-  const [selectedValue, setSelectedValue] = useState("");
-
   const [allResults, setAllResults] = useState();
   const [displayFlag, setDisplayFlag] = useState(false);
 
@@ -32,28 +29,25 @@ const LocationList = (props) => {
     else {
       console.log("Error processing origin, destination");
     }
-
-    if (selectedValue !== "") {
-      if (allResults.type === 'Source') {
-        setSelectedSource(selectedValue);
-      }
-      else if (allResults.type === 'Dest') {
-        setSelectedDest(selectedValue);
-      }
-      else {
-        console.log("Error parsing type.");
-      }
-    }
     returnValues();
   })
 
   updateValues = (selectedSingleValues) => {
-    setSelectedValue(selectedSingleValues);
+    if (allResults.type === "Source") {
+      setSelectedSource(selectedSingleValues);
+    }
+    else if (allResults.type === "Dest") {
+      setSelectedDest(selectedSingleValues);
+    }
+    else {
+      console.log("Error parsing type.");
+    }
     setDisplayFlag(false);
   }
 
   returnValues = () => {
     if (selectedSource, selectedDest !== "" && selectedSource !== selectedDest) {
+      setAllResults();
       return (
         props.selectedPlaces({
           origin_id: selectedSource.place_id,

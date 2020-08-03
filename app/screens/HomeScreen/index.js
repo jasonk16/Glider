@@ -37,6 +37,8 @@ const HomeScreen = () => {
     //clear any previous selected locations
     if (selectedLocations !== "") {
       setSelectedLocations("");
+      setReturnedPrediction("");
+      setSearchResults(""); 
     }
     setIsLoading(true);
     let returnedResults = await getSearchLocations(searchValues);
