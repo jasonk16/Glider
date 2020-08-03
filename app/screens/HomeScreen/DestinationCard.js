@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, Linking } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
@@ -10,11 +10,13 @@ const DestinationCard = (props) => {
   let timeOfDay = date.getDay();
   let openingTime
 
-  if (data.opening_hours && data.opening_hours.periods && data.opening_hours.periods.close && data.opening_hours.periods.close.day) {
-    let openingPeriod = data.opening_hours.periods;
+  if (data.opening_hours && data.opening_hours.periods) {
+    let openingPeriod = data.opening_hours.periods
     openingPeriod.forEach((timeObject) => {
-      if (timeObject.close.day === timeOfDay) {
-        openingTime = timeObject.open.time + " - " + timeObject.close.time;
+      if (timeObject.close) {
+        if (timeObject.close.day === timeOfDay) {
+          openingTime = timeObject.open.time + " - " + timeObject.close.time;
+        }
       }
     })
   }
@@ -34,7 +36,7 @@ const DestinationCard = (props) => {
                   <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
                     {data.name}
                   </Text>
-                  <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail">
+                  <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail" onPress={()=> Linking.openURL(data.website)}>
                     {data.website}
                   </Text>
                   <View style={styles.addressSection}>
@@ -93,7 +95,8 @@ const styles = StyleSheet.create({
   cardDesc: {
     fontFamily: 'SourceSansPro-Regular',
     color: commonStyles.textBrown,
-    marginTop: 5
+    marginTop: 5,
+    textDecorationLine: 'underline'
   },
   addressSection: {
     marginTop: 20,
