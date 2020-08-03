@@ -10,16 +10,13 @@ const DestinationCard = (props) => {
   let timeOfDay = date.getDay();
   let openingTime
 
-  if (data.opening_hours !== undefined) {
-    if (data.opening_hours.periods !== undefined) {
-      let openingPeriod = data.opening_hours.periods;
-      console.log("OPEN", openingPeriod)
-      openingPeriod.forEach((timeObject) => {
-        if (timeObject.close.day === timeOfDay) {
-          openingTime = timeObject.open.time + " - " + timeObject.close.time;
-        }
-      })
-    }
+  if (data.opening_hours && data.opening_hours.periods && data.opening_hours.periods.close && data.opening_hours.periods.close.day) {
+    let openingPeriod = data.opening_hours.periods;
+    openingPeriod.forEach((timeObject) => {
+      if (timeObject.close.day === timeOfDay) {
+        openingTime = timeObject.open.time + " - " + timeObject.close.time;
+      }
+    })
   }
 
   return (

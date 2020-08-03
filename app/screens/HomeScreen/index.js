@@ -11,6 +11,8 @@ import DestinationCard from './DestinationCard';
 import PredictionCard from './PredictionCard';
 import LocationList from './LocationLists';
 import Placeholder from '../../shared/Placeholder';
+import LoadingSearch from '../../shared/Loading';
+import SearchError from '../../shared/SearchError';
 
 import { getSearchLocations, getLocationInformation } from './routingRequest';
 
@@ -18,7 +20,7 @@ const LoadingScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.animationContainer}>
-        <LottieView style={styles.loadingAnimation} source={require('../../assets/loading-map.json')} autoPlay loop />
+        <LottieView style={styles.loadingAnimation} source={require('../../assets/loading/loading-map.json')} autoPlay loop />
         <Text style={styles.loadingText}>Taking you there...</Text>
       </View>
     </View>
@@ -29,23 +31,23 @@ const HomeScreen = () => {
   const [searchResults, setSearchResults] = useState("");
   const [selectedLocations, setSelectedLocations] = useState("");
   const [returnedPrediction, setReturnedPrediction] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   onSearch = async (searchValues) => {
     //clear any previous selected locations
     if (selectedLocations !== "") {
       setSelectedLocations("");
     }
+    setIsLoading(true);
     let returnedResults = await getSearchLocations(searchValues);
     setSearchResults(returnedResults);
+    setIsLoading(false)
   }
 
   fetchDestinationData = async () => {
-    //clear searchResults if want to return to original page
     if (selectedLocations !== "") {
       let returnedData = await getLocationInformation(selectedLocations);
       setReturnedPrediction(returnedData);
-      //set state using the returned data
-      //clear selectedLocations. (or clear tgt with searcResults when user clicks back) 
     };
   }
 
@@ -81,7 +83,13 @@ const HomeScreen = () => {
             }
           </>
           :
-          <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
+          <>
+            { Object.keys(searchResults[0].results).length !== 0 && Object.keys(searchResults[1].results).length !== 0 ?
+              <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
+              :
+              <SearchError />
+            }
+          </>
         }
       </>
     )
@@ -90,22 +98,29 @@ const HomeScreen = () => {
   return (
     <View style={styles.bodyContainer}>
       <Greeting />
-      <Text style={styles.bodyTitle}>Where would you like to go? </Text>
-      <View style={styles.inputSection}>
-        <Search onSearch={this.onSearch} />
-      </View>
-      <View style={styles.infoDisplaySection}>
-        {(searchResults !== "") ?
-          (
-            <>
-              <SearchOperation />
-            </>
-          ) :
-          (
-            <>
-              <Placeholder />
-            </>
-          )
+      <View style={{ flex: 1 }}>
+        <Text style={styles.bodyTitle}>Where would you like to go? </Text>
+        <View style={styles.inputSection}>
+          <Search onSearch={this.onSearch} />
+        </View>
+        <View style={styles.infoDisplaySection}>
+          {(searchResults !== "") ?
+            (
+              <>
+                <SearchOperation />
+              </>
+            ) :
+            (
+              <>
+                <Placeholder />
+              </>
+            )
+          }
+        </View>
+        {isLoading &&
+          <View style={styles.loadingSearch}>
+            <LoadingSearch />
+          </View>
         }
       </View>
     </View>
@@ -115,7 +130,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   bodyContainer: {
     flex: 1,
-    backgroundColor: "#ffffff"
+    backgroundColor: commonStyles.white
   },
   bodyTitle: {
     color: commonStyles.textBrown,
@@ -140,7 +155,7 @@ const styles = StyleSheet.create({
     color: commonStyles.themeOrange,
     fontFamily: 'SourceSansPro-Bold',
     fontSize: 20,
-    textDecorationLine: 'underline', 
+    textDecorationLine: 'underline',
   },
   animationContainer: {
     justifyContent: 'center',
@@ -154,6 +169,14 @@ const styles = StyleSheet.create({
     color: '#FDB535',
     fontFamily: 'SourceSansPro-Black',
     fontSize: 25
+  },
+  loadingSearch: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
   }
 })
 

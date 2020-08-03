@@ -47,8 +47,8 @@ const LocationList = (props) => {
     returnValues();
   })
 
-  updateValues = (selectedValues) => {
-    setSelectedValue(selectedValues);
+  updateValues = (selectedSingleValues) => {
+    setSelectedValue(selectedSingleValues);
     setDisplayFlag(false);
   }
 
@@ -71,7 +71,7 @@ const LocationList = (props) => {
         <>
           <Text style={styles.sectionTitle}>Select {allResults.type === 'Source' ? 'Starting Point' : 'Destination'}: </Text>
           <View style={{ flex: 1 }}>
-            <ScrollView alwaysBounceVertical={true}>
+            <ScrollView alwaysBounceVertical={true} keyboardShouldPersistTaps={'handled'}>
               {
                 allResults.results.map((values, i) => {
                   return (

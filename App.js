@@ -23,6 +23,7 @@ import SplashScreen from 'react-native-splash-screen';
 
 import Header from './app/shared/Header';
 import HomeScreen from './app/screens/HomeScreen';
+import ErrorBoundary from './app/shared/ErrorBoundary';
 
 import commonStyles from './app/styles/commonStyles';
 
@@ -39,10 +40,12 @@ const App: () => React$Node = () => {
       <NavigationContainer>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={{ flex: 1, backgroundColor: commonStyles.backgroundOrange }} edges={['top']}>
-          <Header />
-          <Stack.Navigator headerMode="none">
-            <Stack.Screen name="Home" component={HomeScreen} />
-          </Stack.Navigator>
+          <ErrorBoundary>
+            <Header />
+            <Stack.Navigator headerMode="none">
+              <Stack.Screen name="Home" component={HomeScreen} />
+            </Stack.Navigator>
+          </ErrorBoundary>
         </SafeAreaView>
       </NavigationContainer>
     </SafeAreaProvider>

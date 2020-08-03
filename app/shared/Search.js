@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, View, TextInput, Text, Image, TouchableOpacity } from 'react-native';
 
 import commonStyles from '../styles/commonStyles';
@@ -9,10 +9,14 @@ const Search = (props) => {
   const [destValue, destOnChangeText] = React.useState("");
 
   SubmitForm = () => {
-    props.onSearch({
-      "originValue": originValue,
-      "destValue": destValue
-    })
+    if (originValue && destValue !== ""){
+      let newOrigin = originValue.replace(/ /g, "+");
+      let newDest = destValue.replace(/ /g, "+")
+      props.onSearch({
+        "originValue": newOrigin,
+        "destValue": newDest
+      })
+    }
   }
 
   return (
