@@ -9,22 +9,24 @@ const PredictionCard = (props) => {
 
   return (
     <View style={styles.predictionBox}>
-      <LinearGradient
-        style={styles.cardGradient}
-        colors={['#F9C823', '#FC506E']}
-        start={{ x: 0, y: 2.5 }}
-        end={{ x: 0.7, y: 1 }}>
-        <View style={styles.indicatorColumn}>
+      {data.route_name && data.predicted_time && data.route_distance &&
+        <LinearGradient
+          style={styles.cardGradient}
+          colors={['#F9C823', '#FC506E']}
+          start={{ x: 0, y: 2.5 }}
+          end={{ x: 0.7, y: 1 }}>
+          <View style={styles.indicatorColumn}>
             <View style={styles.trafficIndicator}></View>
-        </View>
-        <View style={styles.routeColumn}>
-          <Text style={styles.routeName}>via {data.route_name}</Text>
-        </View>
-        <View style={styles.predictedColumn}>
-          <Text style={styles.predictedTime}>{data.predicted_time}</Text>
-          <Text style={styles.predictedDistance}>{data.route_distance}</Text>
-        </View>
-      </LinearGradient>
+          </View>
+          <View style={styles.routeColumn}>
+            <Text style={styles.routeName} numberOfLines={1} ellipsizeMode="tail">via {data.route_name}</Text>
+          </View>
+          <View style={styles.predictedColumn}>
+            <Text style={styles.predictedTime}>{data.predicted_time}</Text>
+            <Text style={styles.predictedDistance}>{data.route_distance}</Text>
+          </View>
+        </LinearGradient>
+      }
     </View>
   )
 }
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
     height: 18,
     borderRadius: 9,
     borderColor: commonStyles.green,
-    backgroundColor: commonStyles.greenRGBA, 
+    backgroundColor: commonStyles.greenRGBA,
     borderWidth: 3
   },
   routeColumn: {
