@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { StyleSheet, View, Text, ScrollView, Animated } from 'react-native';
 import commonStyles from '../../styles/commonStyles';
 
 import LocationCards from './LocationCards';
 
 const LocationList = (props) => {
+
+  // const fadeAnim = useRef(new Animated.Value(0)).current
+  const [fadeValue , setFadeValue] = useState(new Animated.Value(0))
 
   const [allResults, setAllResults] = useState();
   const [displayFlag, setDisplayFlag] = useState(false);
@@ -30,7 +33,18 @@ const LocationList = (props) => {
       console.log("Error processing origin, destination");
     }
     returnValues();
+    if (displayFlag === true) {
+      animationStart();
+    }
   })
+
+  animationStart = () => {
+    Animated.timing(fadeValue, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true
+    }).start()
+  }
 
   updateValues = (selectedSingleValues) => {
     if (allResults.type === "Source") {
@@ -65,7 +79,7 @@ const LocationList = (props) => {
         <>
           <Text style={styles.sectionTitle}>Select {allResults.type === 'Source' ? 'Starting Point' : 'Destination'}: </Text>
           <View style={{ flex: 1 }}>
-            <ScrollView alwaysBounceVertical={true} keyboardShouldPersistTaps={'handled'}>
+            <Animated.ScrollView style={{ opacity: fadeValue }} alwaysBounceVertical={true} keyboardShouldPersistTaps={'handled'}>
               {
                 allResults.results.map((values, i) => {
                   return (
@@ -73,7 +87,7 @@ const LocationList = (props) => {
                   )
                 })
               }
-            </ScrollView>
+            </Animated.ScrollView>
           </View>
         </>
       }
