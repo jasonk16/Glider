@@ -36,26 +36,33 @@ const DestinationCard = (props) => {
                   <Text style={styles.cardTitle} numberOfLines={1} ellipsizeMode="tail">
                     {data.name}
                   </Text>
-                  <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail" onPress={()=> Linking.openURL(data.website)}>
-                    {data.website}
-                  </Text>
-                  <View style={styles.addressSection}>
-                    <Image source={require('../../assets/displaycard/address-icon.png')} />
-                    <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
-                      {data.formatted_address}
+                  {data.website &&
+                    <Text style={styles.cardDesc} numberOfLines={2} ellipsizeMode="tail" onPress={() => Linking.openURL(data.website)}>
+                      {data.website}
                     </Text>
-                  </View>
-                  <View style={styles.phoneSection}>
-                    <Image source={require('../../assets/displaycard/phone-icon.png')} />
-                    <Text style={styles.infoText}>{data.formatted_phone_number}</Text>
-                  </View>
+                  }
+                  {data.formatted_address &&
+                    <View style={styles.addressSection}>
+                      <Image source={require('../../assets/displaycard/address-icon.png')} />
+                      <Text style={styles.infoText} numberOfLines={2} ellipsizeMode="tail">
+                        {data.formatted_address}
+                      </Text>
+                    </View>
+                  }
+                  {data.formatted_phone_number &&
+                    <View style={styles.phoneSection}>
+                      <Image source={require('../../assets/displaycard/phone-icon.png')} />
+                      <Text style={styles.infoText}>{data.formatted_phone_number}</Text>
+                    </View>
+                  }
                 </View>
                 <View style={styles.operatingHours}>
-                  {
-                    data.opening_hours !== undefined &&
+                  {data.opening_hours !== undefined &&
                     <>
                       <Text style={styles.openStatus}>{data.opening_hours.open_now ? 'OPEN NOW' : 'CLOSED'}</Text>
-                      <Text style={styles.openTimes}>{openingTime}</Text>
+                      {openingTime &&
+                        <Text style={styles.openTimes}>{openingTime}</Text>
+                      }
                     </>
                   }
                 </View>

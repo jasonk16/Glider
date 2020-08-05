@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
@@ -9,7 +9,7 @@ const PredictionCard = (props) => {
 
   return (
     <View style={styles.predictionBox}>
-      {data.route_name && data.predicted_time && data.route_distance &&
+      {data.route_name && data.predicted_time && data.route_distance ?
         <LinearGradient
           style={styles.cardGradient}
           colors={['#F9C823', '#FC506E']}
@@ -24,6 +24,16 @@ const PredictionCard = (props) => {
           <View style={styles.predictedColumn}>
             <Text style={styles.predictedTime}>{data.predicted_time}</Text>
             <Text style={styles.predictedDistance}>{data.route_distance}</Text>
+          </View>
+        </LinearGradient>
+        :
+        <LinearGradient
+          style={styles.cardGradient}
+          colors={['#F9C823', '#FC506E']}
+          start={{ x: 0, y: 2.5 }}
+          end={{ x: 0.7, y: 1 }}>
+          <View style={styles.errorColumn}>
+            <Text style={styles.routeName}>Unable to get prediction. Please try refining your search.</Text>
           </View>
         </LinearGradient>
       }
@@ -80,6 +90,11 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18,
     color: '#FFFFFF'
+  },
+  errorColumn: {
+    flex: 1,
+    justifyContent: 'center',
+    marginLeft: 20
   }
 })
 export default PredictionCard;

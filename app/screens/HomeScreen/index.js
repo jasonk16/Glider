@@ -50,6 +50,7 @@ const HomeScreen = () => {
   fetchDestinationData = async () => {
     if (selectedLocations !== "") {
       let returnedData = await getLocationInformation(selectedLocations);
+      console.log("returned data: ", returnedData); 
       setReturnedPrediction(returnedData);
     };
   }
@@ -61,7 +62,7 @@ const HomeScreen = () => {
   }
 
   useEffect(() => {
-    if (returnedPrediction === "") {
+    if (returnedPrediction === "" || undefined) {
       fetchDestinationData();
     }
   })
