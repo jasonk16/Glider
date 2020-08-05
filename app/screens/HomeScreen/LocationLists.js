@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, View, Text, ScrollView, Animated } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import commonStyles from '../../styles/commonStyles';
 
 import LocationCards from './LocationCards';
 
 const LocationList = (props) => {
-
-  // const fadeAnim = useRef(new Animated.Value(0)).current
-  const [fadeValue , setFadeValue] = useState(new Animated.Value(0))
 
   const [allResults, setAllResults] = useState();
   const [displayFlag, setDisplayFlag] = useState(false);
@@ -33,18 +31,7 @@ const LocationList = (props) => {
       console.log("Error processing origin, destination");
     }
     returnValues();
-    if (displayFlag === true) {
-      animationStart();
-    }
   })
-
-  animationStart = () => {
-    Animated.timing(fadeValue, {
-      toValue: 1,
-      duration: 500,
-      useNativeDriver: true
-    }).start()
-  }
 
   updateValues = (selectedSingleValues) => {
     if (allResults.type === "Source") {
@@ -79,15 +66,17 @@ const LocationList = (props) => {
         <>
           <Text style={styles.sectionTitle}>Select {allResults.type === 'Source' ? 'Starting Point' : 'Destination'}: </Text>
           <View style={{ flex: 1 }}>
-            <Animated.ScrollView style={{ opacity: fadeValue }} alwaysBounceVertical={true} keyboardShouldPersistTaps={'handled'}>
+            <ScrollView alwaysBounceVertical={true} keyboardShouldPersistTaps={'handled'}>
               {
                 allResults.results.map((values, i) => {
                   return (
-                    <LocationCards key={i + 1} onSelect={this.updateValues} cardValues={values} />
+                    <Animatable.View animation="fadeInRight" key={i + 1} useNativeDriver={true}>
+                      <LocationCards onSelect={this.updateValues} cardValues={values} />
+                    </Animatable.View>
                   )
                 })
               }
-            </Animated.ScrollView>
+            </ScrollView>
           </View>
         </>
       }

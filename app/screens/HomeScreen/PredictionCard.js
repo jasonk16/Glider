@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     borderWidth: 3
   },
   routeColumn: {
-    flex: 2,
+    flex: 3,
     justifyContent: 'center',
     marginLeft: 20
   },
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF'
   },
   predictedColumn: {
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'flex-end',
     marginRight: 20

@@ -5,10 +5,10 @@ import LottieView from 'lottie-react-native';
 const LoadingSearch = () => {
   let textSample = {
     text: [
-      "Give me a sec...",
+      "Wonder often, wonder always",
       "What's new in your area?",
       "Going through every corner...",
-      "Look left, look right"
+      "Embrace the detours..."
     ]
   }
 

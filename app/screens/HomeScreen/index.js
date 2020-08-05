@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import LottieView from 'lottie-react-native';
 
 import commonStyles from '../../styles/commonStyles';
@@ -34,7 +35,7 @@ const HomeScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   onSearch = async (searchValues) => {
-    //clear any previous selected locations
+    //clear any previous selected locations before searching
     if (selectedLocations !== "") {
       setSelectedLocations("");
       setReturnedPrediction("");
@@ -71,17 +72,17 @@ const HomeScreen = () => {
         {selectedLocations !== "" ?
           <>
             {returnedPrediction !== "" ?
-              <>
+              <Animatable.View animation="fadeIn" useNativeDriver={true}>
                 <DestinationCard locationDetails={returnedPrediction[0]} />
                 <PredictionCard predictedTime={returnedPrediction[1]} />
                 <TouchableOpacity style={styles.clearResults} onPress={this.clearAll}>
                   <Text style={styles.clearText}>Clear Results</Text>
                 </TouchableOpacity>
-              </>
+              </Animatable.View>
               :
-              <>
+              <Animatable.View animation="fadeIn" useNativeDriver={true} style={{flex: 1}}>
                 <LoadingScreen />
-              </>
+              </Animatable.View>
             }
           </>
           :
