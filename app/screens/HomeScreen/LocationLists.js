@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import commonStyles from '../../styles/commonStyles';
 
 import LocationCards from './LocationCards';
@@ -69,7 +70,9 @@ const LocationList = (props) => {
               {
                 allResults.results.map((values, i) => {
                   return (
-                    <LocationCards key={i + 1} onSelect={this.updateValues} cardValues={values} />
+                    <Animatable.View animation="fadeInRight" key={i + 1} useNativeDriver={true}>
+                      <LocationCards onSelect={this.updateValues} cardValues={values} />
+                    </Animatable.View>
                   )
                 })
               }
