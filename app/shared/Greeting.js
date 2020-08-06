@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import commonStyles from '../styles/commonStyles';
+import { getTraffic } from './routingRequest';
 
 class Greeting extends Component {
 
   constructor() {
     super();
     this.state = {
-      greetingText: ""
+      greetingText: "",
+      trafficStatus: "Clear",
+      localArea: ""
     }
   }
 
   componentDidMount() {
     this.getTime();
+    this.getTrafficDetails();
   }
 
   getTime() {
@@ -42,14 +46,54 @@ class Greeting extends Component {
     }
   }
 
+  async getTrafficDetails() {
+    let long = -0.118092;
+    let lat = 51.509865;
+    let trafficSpeed = await getTraffic(long, lat);
+
+    if (trafficSpeed.area) {
+      this.setState({
+        localArea: trafficSpeed.area
+      })
+    }
+
+    if (trafficSpeed) {
+      let normalSpeed = trafficSpeed.normalSpeed;
+      let currentSpeed = trafficSpeed.actualSpeed;
+
+      let speedDifference = Math.abs(normalSpeed - currentSpeed);
+      if (speedDifference <= normalSpeed / 100 * 30) {
+        this.setState({
+          trafficStatus: "Slow"
+        })
+      }
+      else if (speedDifference <= normalSpeed / 100 * 60) {
+        this.setState({
+          trafficStatus: "Moderate"
+        })
+      }
+      else {
+        this.setState({
+          trafficStatus: "Clear"
+        })
+      }
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.headerText}>{this.state.greetingText}</Text>
         <View style={styles.statusText}>
-          <Text style={styles.statusLocation}>Traffic in KLCC: </Text>
-          <View style={styles.statusCircle}></View>
-          <Text style={styles.statusReport}>Clear</Text>
+          {this.state.localArea ?
+            <>
+              <Text style={styles.statusLocation}>Traffic in {this.state.localArea}: </Text>
+              <View style={styles.statusCircle}></View>
+              <Text style={styles.statusReport}>{this.state.trafficStatus}</Text>
+            </>
+            :
+            <Text style={styles.statusLocation}>Getting traffic conditions... </Text>
+          }
         </View>
       </View>
     )
@@ -84,7 +128,7 @@ const styles = StyleSheet.create({
     height: 18,
     borderRadius: 9,
     borderColor: commonStyles.green,
-    backgroundColor: commonStyles.greenRGBA, 
+    backgroundColor: commonStyles.greenRGBA,
     borderWidth: 3
   },
   statusReport: {

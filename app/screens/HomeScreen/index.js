@@ -15,7 +15,7 @@ import Placeholder from '../../shared/Placeholder';
 import LoadingSearch from '../../shared/Loading';
 import SearchError from '../../shared/SearchError';
 
-import { getSearchLocations, getLocationInformation } from './routingRequest';
+import { getSearchLocations, getLocationInformation } from '../../shared/routingRequest';
 
 const LoadingScreen = () => {
   return (
@@ -50,7 +50,6 @@ const HomeScreen = () => {
   fetchDestinationData = async () => {
     if (selectedLocations !== "") {
       let returnedData = await getLocationInformation(selectedLocations);
-      console.log("returned data: ", returnedData); 
       setReturnedPrediction(returnedData);
     };
   }
