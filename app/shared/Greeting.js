@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import Geolocation from 'react-native-geolocation-service';
 
 import commonStyles from '../styles/commonStyles';
 import { getTraffic } from './routingRequest';
@@ -11,13 +12,28 @@ class Greeting extends Component {
     this.state = {
       greetingText: "",
       trafficStatus: "Clear",
-      localArea: ""
+      localArea: "",
+      locationMessage: "Loading location..."
     }
   }
 
   componentDidMount() {
+    Geolocation.getCurrentPosition(
+      async (position) => {
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude
+        await this.getTrafficDetails(lat, long);
+      },
+      (error) => {
+        console.log(error.code, error.message);
+        this.setState({
+          locationMessage: "Unable to get location"
+        })
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+    );
     this.getTime();
-    this.getTrafficDetails();
+
   }
 
   getTime() {
@@ -46,36 +62,36 @@ class Greeting extends Component {
     }
   }
 
-  async getTrafficDetails() {
-    let long = -0.118092;
-    let lat = 51.509865;
-    let trafficSpeed = await getTraffic(long, lat);
+  async getTrafficDetails(lat, long) {
+    if (long && lat) {
+      let trafficSpeed = await getTraffic(long, lat);
 
-    if (trafficSpeed.area) {
-      this.setState({
-        localArea: trafficSpeed.area
-      })
-    }
-
-    if (trafficSpeed) {
-      let normalSpeed = trafficSpeed.normalSpeed;
-      let currentSpeed = trafficSpeed.actualSpeed;
-
-      let speedDifference = Math.abs(normalSpeed - currentSpeed);
-      if (speedDifference <= normalSpeed / 100 * 30) {
+      if (trafficSpeed.area) {
         this.setState({
-          trafficStatus: "Slow"
+          localArea: trafficSpeed.area
         })
       }
-      else if (speedDifference <= normalSpeed / 100 * 60) {
-        this.setState({
-          trafficStatus: "Moderate"
-        })
-      }
-      else {
-        this.setState({
-          trafficStatus: "Clear"
-        })
+
+      if (trafficSpeed) {
+        let normalSpeed = trafficSpeed.normalSpeed;
+        let currentSpeed = trafficSpeed.actualSpeed;
+
+        let speedDifference = Math.abs(normalSpeed - currentSpeed);
+        if (speedDifference <= normalSpeed / 100 * 30) {
+          this.setState({
+            trafficStatus: "Slow"
+          })
+        }
+        else if (speedDifference <= normalSpeed / 100 * 60) {
+          this.setState({
+            trafficStatus: "Moderate"
+          })
+        }
+        else {
+          this.setState({
+            trafficStatus: "Clear"
+          })
+        }
       }
     }
   }
@@ -92,7 +108,7 @@ class Greeting extends Component {
               <Text style={styles.statusReport}>{this.state.trafficStatus}</Text>
             </>
             :
-            <Text style={styles.statusLocation}>Getting traffic conditions... </Text>
+            <Text style={styles.statusLocation}>{this.state.locationMessage}</Text>
           }
         </View>
       </View>

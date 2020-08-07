@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Use location to provide surrounding traffic information.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SourceSansPro-Black.ttf</string>

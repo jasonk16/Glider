@@ -19,6 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GliderTests.m */; };
 		596C2178EF204196ACD0BB70 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		96D0E69624DD56BE0077DF99 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0E69524DD56BE0077DF99 /* LocationServices.swift */; };
 		C01FFB5360E5DBB00CD3B652 /* libPods-Glider-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE62A0FA51F486169FDAC95 /* libPods-Glider-tvOS.a */; };
 		C08877B26EA1A0CAA2F89C6A /* libPods-Glider-GliderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8586DBAA294CE33B6660588 /* libPods-Glider-GliderTests.a */; };
 		C772A571F3DAE1E5B9744E01 /* libPods-Glider-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB701976EB0C60E3D9151F5 /* libPods-Glider-tvOSTests.a */; };
@@ -64,6 +65,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Glider/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82CE183DF57C3F87C70DE1A3 /* Pods-Glider-GliderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-GliderTests.release.xcconfig"; path = "Target Support Files/Pods-Glider-GliderTests/Pods-Glider-GliderTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F0ADE39953E9626EB70CB8C /* Pods-Glider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider.release.xcconfig"; path = "Target Support Files/Pods-Glider/Pods-Glider.release.xcconfig"; sourceTree = "<group>"; };
+		96D0E69424DD56BE0077DF99 /* Glider-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Glider-Bridging-Header.h"; sourceTree = "<group>"; };
+		96D0E69524DD56BE0077DF99 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		990B831DCF4FFFD325819044 /* Pods-Glider-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glider-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Glider-tvOSTests/Pods-Glider-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B535AF634D7482293C61323 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Bold.ttf"; path = "../app/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
 		9EB701976EB0C60E3D9151F5 /* libPods-Glider-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Glider-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +141,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				96D0E69524DD56BE0077DF99 /* LocationServices.swift */,
+				96D0E69424DD56BE0077DF99 /* Glider-Bridging-Header.h */,
 			);
 			name = Glider;
 			sourceTree = "<group>";
@@ -311,7 +316,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = N6636DGWD9;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1160;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -589,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				96D0E69624DD56BE0077DF99 /* LocationServices.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75F19ADEACE21F2087488A85 /* Pods-Glider-GliderTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -653,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82CE183DF57C3F87C70DE1A3 /* Pods-Glider-GliderTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = GliderTests/Info.plist;
@@ -687,6 +695,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jason.gliderApp;
 				PRODUCT_NAME = Glider;
+				SWIFT_OBJC_BRIDGING_HEADER = "Glider-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -710,6 +719,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jason.gliderApp;
 				PRODUCT_NAME = Glider;
+				SWIFT_OBJC_BRIDGING_HEADER = "Glider-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
