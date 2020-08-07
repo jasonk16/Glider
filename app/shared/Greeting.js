@@ -13,7 +13,9 @@ class Greeting extends Component {
       greetingText: "",
       trafficStatus: "Clear",
       localArea: "",
-      locationMessage: "Loading location..."
+      locationMessage: "Loading location...",
+      indicatorColor: "rgba(128, 185, 24, .5)",
+      indicatorBorder: "#80b918"
     }
   }
 
@@ -65,7 +67,6 @@ class Greeting extends Component {
   async getTrafficDetails(lat, long) {
     if (long && lat) {
       let trafficSpeed = await getTraffic(long, lat);
-
       if (trafficSpeed.area) {
         this.setState({
           localArea: trafficSpeed.area
@@ -73,23 +74,26 @@ class Greeting extends Component {
       }
 
       if (trafficSpeed) {
-        let normalSpeed = trafficSpeed.normalSpeed;
-        let currentSpeed = trafficSpeed.actualSpeed;
+        let normalSpeed = parseInt(trafficSpeed.normal_speed);
+        let currentSpeed = parseInt(trafficSpeed.actual_speed);
 
-        let speedDifference = Math.abs(normalSpeed - currentSpeed);
-        if (speedDifference <= normalSpeed / 100 * 30) {
+        if (currentSpeed <= normalSpeed / 100 * 30) {
           this.setState({
-            trafficStatus: "Slow"
+            trafficStatus: "Congestion",
+            indicatorBorder: 'rgba(189, 49, 83, 0.5)',
+            indicatorColor: '#bd3153'
           })
         }
-        else if (speedDifference <= normalSpeed / 100 * 60) {
+        else if (currentSpeed <= normalSpeed / 100 * 60) {
           this.setState({
-            trafficStatus: "Moderate"
+            trafficStatus: "Moderate",
+            indicatorBorder: 'rgba(233, 137, 24,0.5)',
+            indicatorColor: '#e98918'
           })
         }
         else {
           this.setState({
-            trafficStatus: "Clear"
+            trafficStatus: "Normal"
           })
         }
       }
@@ -104,7 +108,14 @@ class Greeting extends Component {
           {this.state.localArea ?
             <>
               <Text style={styles.statusLocation}>Traffic in {this.state.localArea}: </Text>
-              <View style={styles.statusCircle}></View>
+              <View style={{
+                width: 18,
+                height: 18,
+                borderRadius: 9,
+                borderColor: this.state.indicatorBorder,
+                backgroundColor: this.state.indicatorColor,
+                borderWidth: 3
+              }}></View>
               <Text style={styles.statusReport}>{this.state.trafficStatus}</Text>
             </>
             :
@@ -138,14 +149,6 @@ const styles = StyleSheet.create({
   statusLocation: {
     color: commonStyles.white,
     fontSize: 18
-  },
-  statusCircle: {
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    borderColor: commonStyles.green,
-    backgroundColor: commonStyles.greenRGBA,
-    borderWidth: 3
   },
   statusReport: {
     color: commonStyles.white,

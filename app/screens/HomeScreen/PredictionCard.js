@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import commonStyles from '../../styles/commonStyles';
 
 const PredictionCard = (props) => {
 
+  const [indicatorColor, setIndicatorColor] = useState("rgba(128, 185, 24, .5)");
+  const [indicatorBorder, setIndicatorBorder] = useState("#80b918");
   let data = props.predictedTime;
+
+  useEffect(() => {
+    if (data.route_distance && data.predicted_time) {
+      let distance = parseInt(data.route_distance);
+      let time = parseInt(data.predicted_time) / 60;
+      let speed = (distance / time);
+      console.log("speed: ", speed)
+      if (speed <= 40) {
+        setIndicatorColor("rgba(189, 49, 83, .5)");
+        setIndicatorBorder("#bd3153");
+      }
+      else if (speed > 40 && speed <= 60) {
+        setIndicatorColor("rgba(255, 209, 102,.5)");
+        setIndicatorBorder("#ffd166");
+      }
+      else {
+        setIndicatorColor("rgba(128, 185, 24, .5)");
+        setIndicatorBorder("#80b918");
+      }
+    }
+  })
 
   return (
     <View style={styles.predictionBox}>
@@ -16,7 +39,14 @@ const PredictionCard = (props) => {
           start={{ x: 0, y: 2.5 }}
           end={{ x: 0.7, y: 1 }}>
           <View style={styles.indicatorColumn}>
-            <View style={styles.trafficIndicator}></View>
+            <View style={{
+              width: 18,
+              height: 18,
+              borderRadius: 9,
+              borderColor: indicatorBorder,
+              backgroundColor: indicatorColor,
+              borderWidth: 3
+            }}></View>
           </View>
           <View style={styles.routeColumn}>
             <Text style={styles.routeName} numberOfLines={1} ellipsizeMode="tail">via {data.route_name}</Text>
