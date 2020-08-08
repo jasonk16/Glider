@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React app snapshot test  App renders correctly 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`React app snapshot test  Homescreen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFA640",
+        "height": "14%",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "SourceSansPro-Black",
+          "fontSize": 38,
+        }
+      }
+    >
+      Good Morning
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingTop": "2%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Loading location...
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#462716",
+          "fontFamily": "SourceSansPro-Regular",
+          "fontSize": 20,
+          "paddingLeft": "5%",
+          "paddingTop": "4%",
+        }
+      }
+    >
+      Where would you like to go? 
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 3,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingTop": 15,
+              "width": "80%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#462716",
+                "fontFamily": "SourceSansPro-Bold",
+                "fontSize": 16,
+              }
+            }
+          >
+            From
+          </Text>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#E98918",
+                "borderBottomWidth": 1,
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Enter starting point"
+              placeholderTextColor="#D6A882"
+              rejectResponderTermination={true}
+              style={
+                Object {
+                  "alignSelf": "auto",
+                  "color": "#462716",
+                  "fontFamily": "SourceSansPro-Regular",
+                  "fontSize": 18,
+                  "marginLeft": 10,
+                  "marginTop": 5,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingTop": 15,
+              "width": "80%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#462716",
+                "fontFamily": "SourceSansPro-Bold",
+                "fontSize": 16,
+              }
+            }
+          >
+            To
+          </Text>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#E98918",
+                "borderBottomWidth": 1,
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Enter destination"
+              placeholderTextColor="#D6A882"
+              rejectResponderTermination={true}
+              style={
+                Object {
+                  "alignSelf": "auto",
+                  "color": "#462716",
+                  "fontFamily": "SourceSansPro-Regular",
+                  "fontSize": 18,
+                  "marginLeft": 10,
+                  "marginTop": 5,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "paddingRight": "15%",
+            "paddingTop": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#E98918",
+                "borderColor": "#E98918",
+                "borderRadius": 20,
+                "borderWidth": 2,
+                "height": 35,
+                "justifyContent": "center",
+                "marginTop": 20,
+                "width": 100,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "SourceSansPro-Regular",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Search
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 6,
+          "marginTop": "2%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

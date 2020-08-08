@@ -39,6 +39,16 @@
     "react-test-renderer": "16.13.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "react-native-geolocation-service": "<rootDir>/__mocks__/moduleMock.js",
+      "react-native-splash-screen" : "<rootDir>/__mocks__/moduleMock.js",
+      "^Image![a-zA-Z0-9$_-]+$": "GlobalImageStub"
+    }
   }
 }

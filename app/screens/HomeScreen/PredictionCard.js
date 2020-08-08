@@ -14,7 +14,7 @@ const PredictionCard = (props) => {
       let distance = parseInt(data.route_distance);
       let time = parseInt(data.predicted_time) / 60;
       let speed = (distance / time);
-      console.log("speed: ", speed)
+
       if (speed <= 40) {
         setIndicatorColor("rgba(189, 49, 83, .5)");
         setIndicatorBorder("#bd3153");
