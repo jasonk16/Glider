@@ -39,7 +39,7 @@ const HomeScreen = () => {
     if (selectedLocations !== "") {
       setSelectedLocations("");
       setReturnedPrediction("");
-      setSearchResults(""); 
+      setSearchResults("");
     }
     setIsLoading(true);
     let returnedResults = await getSearchLocations(searchValues);
@@ -69,25 +69,25 @@ const HomeScreen = () => {
   const SearchOperation = () => {
     return (
       <>
-        {selectedLocations !== "" ?
+        {selectedLocations ?
           <>
-            {returnedPrediction !== "" ?
+            {returnedPrediction ?
               <Animatable.View animation="fadeIn" useNativeDriver={true}>
                 <DestinationCard locationDetails={returnedPrediction[0]} />
-                <PredictionCard predictedTime={returnedPrediction[1]} />
+                  <PredictionCard predictedTime={returnedPrediction[1]} />
                 <TouchableOpacity style={styles.clearResults} onPress={this.clearAll}>
                   <Text style={styles.clearText}>Clear Results</Text>
                 </TouchableOpacity>
               </Animatable.View>
               :
-              <Animatable.View animation="fadeIn" useNativeDriver={true} style={{flex: 1}}>
+              <Animatable.View animation="fadeIn" useNativeDriver={true} style={{ flex: 1 }}>
                 <LoadingScreen />
               </Animatable.View>
             }
           </>
           :
           <>
-            { Object.keys(searchResults[0].results).length !== 0 && Object.keys(searchResults[1].results).length !== 0 ?
+            {Object.keys(searchResults[0].results).length !== 0 && Object.keys(searchResults[1].results).length !== 0 ?
               <LocationList displayData={searchResults} selectedPlaces={setSelectedLocations} />
               :
               <SearchError />

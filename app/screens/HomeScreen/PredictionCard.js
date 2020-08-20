@@ -32,7 +32,7 @@ const PredictionCard = (props) => {
 
   return (
     <View style={styles.predictionBox}>
-      {data.route_name && data.predicted_time && data.route_distance ?
+      {data.predicted_time !== "0 mins" && data.route_distance !== "0 km" ?
         <LinearGradient
           style={styles.cardGradient}
           colors={['#F9C823', '#FC506E']}
@@ -49,7 +49,11 @@ const PredictionCard = (props) => {
             }}></View>
           </View>
           <View style={styles.routeColumn}>
-            <Text style={styles.routeName} numberOfLines={1} ellipsizeMode="tail">via {data.route_name}</Text>
+            {data.route_name ?
+              <Text style={styles.routeName} numberOfLines={1} ellipsizeMode="tail">via {data.route_name}</Text>
+              :
+              <Text style={styles.routeName} numberOfLines={1} ellipsizeMode="tail">To destination</Text>
+            }
           </View>
           <View style={styles.predictedColumn}>
             <Text style={styles.predictedTime}>{data.predicted_time}</Text>
